@@ -71,6 +71,15 @@ npm run build
 
 Deploy the generated `dist/` directory.
 
+### Cloudflare Pages
+
+Use these settings:
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+If Cloudflare fails during `npm ci` with a lockfile mismatch error, make sure the updated `package-lock.json` is committed and trigger a fresh deploy without cache.
+
 ## Notes
 
 - Update deployment-facing details in `src/siteConfig.js` before publishing:
