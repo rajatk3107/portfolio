@@ -75,10 +75,20 @@ Deploy the generated `dist/` directory.
 
 Use these settings:
 
+- Build system version: `v3` or `Latest`
+- Node version: `22.16.0`
 - Build command: `npm run build`
 - Build output directory: `dist`
 
-If Cloudflare fails during `npm ci` with a lockfile mismatch error, make sure the updated `package-lock.json` is committed and trigger a fresh deploy without cache.
+If Cloudflare still fails during dependency installation:
+
+- Commit the updated `package-lock.json`, `.nvmrc`, and `.node-version`
+- Trigger a fresh deploy without cache
+- If the automatic install step still fails, set `SKIP_DEPENDENCY_INSTALL=1` and use this build command instead:
+
+```bash
+npm ci && npm run build
+```
 
 ## Notes
 
