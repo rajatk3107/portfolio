@@ -20,11 +20,11 @@ import { contactMethods } from '../siteConfig'
             :href="item.href"
             target="_blank"
             rel="noreferrer"
-            class="surface-card flex items-center justify-between p-5 transition duration-300 hover:-translate-y-1"
+            class="surface-card flex items-center justify-between gap-4 p-4 transition duration-300 hover:-translate-y-1 sm:p-5"
           >
-            <div>
+            <div class="min-w-0">
               <p class="font-mono text-xs uppercase tracking-[0.28em] text-stone-400 dark:text-stone-500">{{ item.label }}</p>
-              <p class="mt-2 text-sm text-stone-700 dark:text-stone-200">{{ item.value }}</p>
+              <p class="mt-2 break-all text-sm text-stone-700 dark:text-stone-200 sm:break-normal">{{ item.value }}</p>
             </div>
             <span class="text-stone-400 dark:text-stone-500">↗</span>
           </a>
@@ -32,7 +32,7 @@ import { contactMethods } from '../siteConfig'
       </div>
 
       <div data-reveal style="--reveal-delay: 120ms;">
-        <form class="surface-card p-8 sm:p-10">
+        <form class="surface-card p-6 sm:p-10">
           <div class="grid gap-6 sm:grid-cols-2">
             <label class="block">
               <span class="mb-2 block text-sm font-medium text-stone-700 dark:text-stone-200">Name</span>
@@ -72,7 +72,7 @@ import { contactMethods } from '../siteConfig'
           </label>
 
           <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p class="text-sm text-stone-500 dark:text-stone-400">UI-only form. Hook this up to EmailJS, Formspree, or a backend endpoint later.</p>
+            <p class="max-w-md text-sm text-stone-500 dark:text-stone-400">UI-only form. Hook this up to EmailJS, Formspree, or a backend endpoint later.</p>
             <button type="button" class="primary-button">Send Message</button>
           </div>
         </form>

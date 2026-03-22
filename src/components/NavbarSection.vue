@@ -21,8 +21,8 @@ const links = [
 
 <template>
   <header class="sticky top-0 z-50 border-b border-stone-200/80 bg-stone-50/85 backdrop-blur-xl dark:border-stone-800/80 dark:bg-stone-950/80">
-    <nav class="section-shell flex items-center justify-between py-4">
-      <a href="#home" class="font-mono text-xs uppercase tracking-[0.34em] text-stone-500 dark:text-stone-400">
+    <nav class="section-shell flex items-center justify-between gap-3 py-3 sm:py-4">
+      <a href="#home" class="max-w-[9.5rem] truncate font-mono text-[10px] uppercase tracking-[0.28em] text-stone-500 dark:text-stone-400 sm:max-w-none sm:text-xs sm:tracking-[0.34em]">
         {{ siteConfig.name }}
       </a>
 
@@ -37,19 +37,19 @@ const links = [
         </a>
       </div>
 
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2 sm:gap-3">
         <button
           type="button"
           :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
-          class="relative inline-flex h-11 w-[5.5rem] items-center rounded-full border border-stone-300 bg-white shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] transition-colors duration-300 hover:border-stone-400 dark:border-stone-700 dark:bg-stone-950 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] dark:hover:border-stone-600"
+          class="relative inline-flex h-10 w-[5rem] items-center rounded-full border border-stone-300 bg-white shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] transition-colors duration-300 hover:border-stone-400 dark:border-stone-700 dark:bg-stone-950 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] dark:hover:border-stone-600 sm:h-11 sm:w-[5.5rem]"
           @click="$emit('toggle-theme')"
         >
           <span
-            class="absolute top-1 h-[2.1rem] w-[2.1rem] rounded-full bg-[#3340b5] shadow-[0_8px_18px_rgba(51,64,181,0.28)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
-            :class="theme === 'dark' ? 'left-[3.05rem]' : 'left-[0.325rem]'"
+            class="absolute top-[0.2rem] h-[1.85rem] w-[1.85rem] rounded-full bg-[#3340b5] shadow-[0_8px_18px_rgba(51,64,181,0.28)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:top-1 sm:h-[2.1rem] sm:w-[2.1rem]"
+            :class="theme === 'dark' ? 'left-[2.85rem] sm:left-[3.05rem]' : 'left-[0.2rem] sm:left-[0.325rem]'"
             aria-hidden="true"
           />
-          <span class="pointer-events-none absolute left-[1.375rem] top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+          <span class="pointer-events-none absolute left-[1.2rem] top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 sm:left-[1.375rem]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -58,7 +58,7 @@ const links = [
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.9"
-              class="h-[1.05rem] w-[1.05rem] transition-all duration-300"
+              class="h-4 w-4 transition-all duration-300 sm:h-[1.05rem] sm:w-[1.05rem]"
               :class="theme === 'dark' ? 'scale-90 text-stone-500 opacity-60' : 'scale-100 text-white opacity-100'"
               aria-hidden="true"
             >
@@ -73,7 +73,7 @@ const links = [
               <path d="m17.3 6.7 1.77-1.77" />
             </svg>
           </span>
-          <span class="pointer-events-none absolute left-[4.125rem] top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+          <span class="pointer-events-none absolute left-[3.75rem] top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 sm:left-[4.125rem]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ const links = [
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.9"
-              class="h-[1.05rem] w-[1.05rem] transition-all duration-300"
+              class="h-4 w-4 transition-all duration-300 sm:h-[1.05rem] sm:w-[1.05rem]"
               :class="theme === 'dark' ? 'scale-100 text-white opacity-100' : 'scale-90 text-stone-300 opacity-70'"
               aria-hidden="true"
             >
@@ -90,8 +90,9 @@ const links = [
             </svg>
           </span>
         </button>
-        <a href="#contact" class="secondary-button !px-4 !py-2">
-          Let&apos;s Talk
+        <a href="#contact" class="secondary-button !px-3 !py-2 sm:!px-4">
+          <span class="hidden sm:inline">Let&apos;s Talk</span>
+          <span class="sm:hidden">Talk</span>
         </a>
       </div>
     </nav>
