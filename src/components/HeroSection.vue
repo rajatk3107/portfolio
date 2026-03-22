@@ -1,17 +1,20 @@
+<script setup>
+import { siteConfig } from '../siteConfig'
+</script>
+
 <template>
   <section id="home" class="section-shell pb-20 pt-14 sm:pb-28 sm:pt-20">
     <div class="section-grid items-center">
       <div data-reveal>
         <p class="eyebrow">Backend Developer Portfolio</p>
         <h1 class="mt-6 max-w-2xl text-5xl font-semibold tracking-tight text-stone-950 dark:text-stone-100 sm:text-6xl">
-          Rajat Kumar Yadav
+          {{ siteConfig.name }}
         </h1>
         <p class="mt-5 text-xl font-medium text-stone-700 dark:text-stone-300">
-          Backend Developer (Node.js &amp; MongoDB)
+          {{ siteConfig.title }}
         </p>
         <p class="mt-6 max-w-xl text-base leading-8 text-stone-600 dark:text-stone-300 sm:text-lg">
-          Backend-focused developer with professional experience building APIs and scalable
-          systems using Node.js and MongoDB. Familiar with Vue.js for frontend development.
+          {{ siteConfig.description }}
         </p>
 
         <div class="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -53,8 +56,8 @@
 
             <div class="overflow-hidden rounded-[2rem] border border-white/70 bg-gradient-to-br from-white via-stone-50 to-stone-100 dark:border-stone-800 dark:from-stone-900 dark:via-stone-900 dark:to-stone-800">
               <img
-                src="/man.png"
-                alt="Portrait of Rajat Kumar Yadav"
+                :src="siteConfig.image"
+                :alt="`Portrait of ${siteConfig.name}`"
                 class="h-[340px] w-full object-cover object-center sm:h-[420px]"
               />
             </div>

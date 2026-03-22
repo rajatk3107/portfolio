@@ -1,0 +1,20 @@
+{
+  "name": "Rajat Kumar Yadav Portfolio",
+  "short_name": "Rajat Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f7f4",
+  "theme_color": "#f8f7f4",
+  "icons": [
+    {
+      "src": "/man.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/man.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

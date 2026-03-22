@@ -1,4 +1,6 @@
 <script setup>
+import { siteConfig } from '../siteConfig'
+
 defineProps({
   theme: {
     type: String,
@@ -21,7 +23,7 @@ const links = [
   <header class="sticky top-0 z-50 border-b border-stone-200/80 bg-stone-50/85 backdrop-blur-xl dark:border-stone-800/80 dark:bg-stone-950/80">
     <nav class="section-shell flex items-center justify-between py-4">
       <a href="#home" class="font-mono text-xs uppercase tracking-[0.34em] text-stone-500 dark:text-stone-400">
-        Rajat Kumar Yadav
+        {{ siteConfig.name }}
       </a>
 
       <div class="hidden items-center gap-8 md:flex">

@@ -1,9 +1,5 @@
 <script setup>
-const contactMethods = [
-  { label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
-  { label: 'LinkedIn', value: 'linkedin.com/in/yourprofile', href: 'https://linkedin.com/in/yourprofile' },
-  { label: 'GitHub', value: 'github.com/yourusername', href: 'https://github.com/yourusername' },
-]
+import { contactMethods } from '../siteConfig'
 </script>
 
 <template>

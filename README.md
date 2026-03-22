@@ -61,9 +61,23 @@ npm run build
 npm run preview
 ```
 
+## Deployment
+
+This project builds to static files and can be deployed directly to Vercel, Netlify, GitHub Pages, or any static host.
+
+```bash
+npm run build
+```
+
+Deploy the generated `dist/` directory.
+
 ## Notes
 
-- Replace placeholder text such as name, company names, links, and resume content with your actual details.
+- Update deployment-facing details in `src/siteConfig.js` before publishing:
+  - `email`
+  - `linkedin`
+  - `github`
+  - `siteUrl`
 - The contact form is UI-only and does not submit anywhere yet.
 - The hero currently uses a static image from `public/man.png`.
 # portfolio
